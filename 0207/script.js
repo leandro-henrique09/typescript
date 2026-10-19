@@ -7,3 +7,9 @@ if (button2) {
     button2.click();
 }
 button?.click();
+const jogo = {
+    nome: "Ragnarok"
+};
+const livro = {};
+jogo.nome?.toLowerCase();
+livro.nome;

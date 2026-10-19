@@ -9,3 +9,17 @@ if(button2) {
 }
 
 button?.click();
+
+interface Product {
+    nome?: string;
+}
+
+const jogo: Product = {
+    nome: "Ragnarok"
+}
+const livro: Product = {
+    
+}
+
+jogo.nome?.toLowerCase();
+livro.nome
