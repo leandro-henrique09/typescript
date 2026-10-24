@@ -33,10 +33,49 @@
 
 // ============ SEGUNDA AULA
 
-function abortar(mensagem: string): never {
-    throw new Error(mensagem)
+// function abortar(mensagem: string): never {
+//     throw new Error(mensagem)
+// }
+
+// abortar('Um erro ocorreu');
+// console.log('Tente novamente');
+
+// interface Quadrado {
+//     lado: number;
+//     perimeto(lado: number): number
+// }
+
+// function calcular(forma: Quadrado) {
+//     forma.perimeto(3);
+// }
+
+// function normalizar(valor:string[]): string[];
+// function normalizar(valor:string): string;
+// function normalizar(valor: string | string[]): string | string[]{
+//     if(typeof valor === "string") {
+//         return valor.trim().toLowerCase();
+//     } else {
+//         return valor.map(item => item.trim().toLowerCase())
+//     }
+// }
+
+// console.log(normalizar(" LEAnDRo  ").toUpperCase());
+// console.log(normalizar(["  BanaNa", "  UVa "]));
+
+
+// Crie uma função que arredonda um valor passado para cima.
+// A função pode receber string ou number.
+// A função deve retornar o mesmo tipo que ela receber.
+
+function arredondarValor(valor: number): number;
+function arredondarValor(valor: string): string;
+function arredondarValor(valor: string | number): string | number {
+    if(typeof valor === "number") {
+        return Math.ceil(valor)
+    } else {
+        return Math.ceil(Number(valor)).toString();
+    }
 }
 
-abortar('Um erro ocorreu');
-console.log('Tente novamente');
+console.log(arredondarValor(230.68));
 
